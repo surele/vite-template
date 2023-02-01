@@ -6,3 +6,15 @@
 
 ESlint
 prettier
+[vscode-stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+
+片段禁用 stylelint
+
+```css
+/* stylelint-disable */
+/* （请说明禁止检测的理由）前端组件限制类名 */
+.cropper_topContainer .img-preview {
+    border: 0 none;
+}
+/* stylelint-enable */
+```

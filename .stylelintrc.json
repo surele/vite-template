@@ -1,0 +1,34 @@
+{
+    "extends": [
+        "stylelint-config-html",
+        "stylelint-config-recommended-scss",
+        "stylelint-config-recommended-vue/scss",
+        "stylelint-config-recess-order",
+        "stylelint-prettier/recommended"
+    ],
+    "defaultSeverity": "warning",
+    "overrides": [
+        {
+            "files": ["**/*.(html|vue)"],
+            "customSyntax": "postcss-html"
+        }
+    ],
+    "rules": {
+        "selector-max-id": 2,
+        "max-nesting-depth": 5,
+        "selector-max-compound-selectors": 5,
+        "indentation": [
+            4,
+            {
+                "severity": "warning"
+            }
+        ],
+        "selector-no-qualifying-type": [
+            true,
+            {
+                "ignore": ["attribute", "class", "id"]
+            }
+        ],
+        "string-quotes": null
+    }
+}
