@@ -1,4 +1,4 @@
-import HelloWorld from "../src/components/HelloWorld.vue";
+import HelloWorld from "../src/components/Hello.vue";
 import { test, expect } from "vitest";
 
 import { mount } from "@vue/test-utils";

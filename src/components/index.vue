@@ -1,9 +1,12 @@
-<script setup lang="ts">
+<script setup lang="ts" name="Welcome">
 import { ref } from "vue";
+import { storeToRefs } from "pinia";
+import { useUserStore } from "@/stores";
 
 defineProps<{ msg: string }>();
-
-const count = ref(0);
+const userStore = useUserStore();
+const { count } = storeToRefs(userStore);
+const { increment } = userStore;
 </script>
 
 <template>

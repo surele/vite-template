@@ -5,13 +5,17 @@ import { fileURLToPath, URL } from "url";
 import stylelint from "vite-plugin-stylelint";
 import virtualHtml from "vite-plugin-virtual-html";
 import ejs from "ejs";
+import AutoImport from "unplugin-auto-import/vite";
+import Components from "unplugin-vue-components/vite";
+import { AntDesignVueResolver } from "unplugin-vue-components/resolvers";
+import VueSetupExtend from "vite-plugin-vue-setup-extend";
 
 const pages = {
     index: {
-        template: "/src/pages/index/index.html",
+        template: "/src/pages/index.html",
         // entry: "/src/main.ts",
-        title: "vite template",
         data: {
+            title: "vite template",
             script: `<script type="module" src="/src/pages/index/main.ts"></script>`
         }
         // body: "<div id='app'></div>" //可选, 默认值: '<div id="app"></div>'
@@ -26,6 +30,7 @@ export default defineConfig({
     },
     plugins: [
         vue(),
+        VueSetupExtend(),
         stylelint({
             fix: true
         }),
@@ -34,15 +39,26 @@ export default defineConfig({
             render(str, data) {
                 return ejs.render(str, data);
             }
+        }),
+        AutoImport({
+            resolvers: [AntDesignVueResolver()]
+        }),
+        Components({
+            dts: true,
+            // dirs: ["src/components"], // 按需加载的文件夹
+            resolvers: [
+                AntDesignVueResolver({
+                    // 参数配置可参考：https://github.com/antfu/unplugin-vue-components/blob/main/src/core/resolvers/antdv.ts
+                    // 自动引入 ant-design/icons-vue中的图标，需要安装@ant-design/icons-vue
+                    resolveIcons: true
+                })
+            ]
         })
     ],
     resolve: {
-        alias: [
-            {
-                find: "@",
-                replacement: fileURLToPath(new URL("./src", import.meta.url))
-            }
-        ]
+        alias: {
+            "@": fileURLToPath(new URL("./src", import.meta.url))
+        }
     },
     build: {
         target: "es2015"

@@ -7,6 +7,7 @@
 ESlint
 prettier
 [vscode-stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+[Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
 片段禁用 stylelint
 

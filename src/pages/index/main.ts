@@ -1,6 +1,14 @@
 import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
-import HelloWorld from "@/components/HelloWorld.vue";
+import router from "./router";
+import store from "@/stores";
 
-createApp(App).mount("#app");
+// 创建vue实例
+const app = createApp(App);
+
+app.use(router);
+app.use(store);
+
+// 挂载实例
+app.mount("#app");
