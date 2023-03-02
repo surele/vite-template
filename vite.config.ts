@@ -62,5 +62,12 @@ export default defineConfig({
     },
     build: {
         target: "es2015"
+    },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: "@import '@/assets/styles/common/_mixin.scss';" // 添加公共样式
+            }
+        }
     }
 });

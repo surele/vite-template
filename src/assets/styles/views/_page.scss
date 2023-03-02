@@ -1,0 +1,23 @@
+/*****************************************
+* 正文
+*****************************************/
+html,
+body,
+#app {
+    margin: 0;
+    overflow: hidden;
+    font-family: PingFangSC, PingFangSC-Regular, Microsoft YaHei, Arial, sans-serif;
+
+    font-size: 0.16rem;
+    @include size;
+
+    // ::-webkit-scrollbar {
+    //     width: 0.08rem;
+    //     height: 0.08rem;
+    // }
+
+    // ::-webkit-scrollbar-thumb {
+    //     background-color: #E9ECF2;
+    //     border-radius: 5px;
+    // }
+}

@@ -1,12 +1,12 @@
-<script setup lang="ts">
-import Hello from "@/components/index.vue";
+<script setup lang="ts" name="welcome">
+import Hello from "@/components/layout/LayoutHeader.vue";
 </script>
 
 <template>
-    <div></div>
     <a-button type="primary">123</a-button>
     <zhihu-outlined />
     <Hello msg="Vite + Vue" />
+    <test-co></test-co>
 </template>
 
 <style scoped>
