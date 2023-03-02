@@ -33,5 +33,7 @@ const onChange = () => {
 
 <style scoped lang="scss">
 .layout-header {
+    width: 100%;
+    height: 0.5rem;
 }
 </style>
