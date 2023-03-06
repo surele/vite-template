@@ -14,7 +14,7 @@ const userStore = useUserStore();
 const { count } = storeToRefs(userStore);
 const { increment } = userStore;
 const onChange = () => {
-    // props.user.age += 1;
+    props.user.age += 1;
 };
 </script>
 

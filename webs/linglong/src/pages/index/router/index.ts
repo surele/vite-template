@@ -1,3 +1,4 @@
+import { CommonRoutes } from "@/router";
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
@@ -15,7 +16,8 @@ const routes = [
         path: "/workbentch",
         name: "workbentch",
         component: () => import("@/pages/index/views/demo/index.vue")
-    }
+    },
+    ...CommonRoutes
 ];
 
 const router = createRouter({

@@ -9,15 +9,15 @@ const app = createApp(App);
 
 app.use(router);
 app.use(store);
-app.component("test-co", {
-    setup() {
-        return {};
-    },
-    template: `
-    <button >
-      You clicked me  times.
-    </button>`
-});
+// app.component("test-co", {
+//     setup() {
+//         return {};
+//     },
+//     template: `
+//     <button >
+//       You clicked me  times.
+//     </button>`
+// });
 
 // 挂载实例
 app.mount("#app");

@@ -9,6 +9,8 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AAvatar: typeof import('ant-design-vue/es')['Avatar']
     AButton: typeof import('ant-design-vue/es')['Button']
+    AInput: typeof import('ant-design-vue/es')['Input']
+    AInputPassword: typeof import('ant-design-vue/es')['InputPassword']
     Components: typeof import('./src/components/index.vue')['default']
     Hello: typeof import('./src/components/Hello.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']

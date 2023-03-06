@@ -2,15 +2,15 @@
     "name": "vue-template",
     "private": true,
     "version": "0.0.0",
-    "type": "module",
     "scripts": {
         "linglong:dev": "pnpm --filter linglong dev",
         "prepare": "husky install",
         "commit": "cz",
-        "lint:eslint": "eslint --cache --max-warnings 10  \"src/**/*.{vue,ts,tsx}\" --fix",
+        "lint:eslint": "eslint --cache --max-warnings 10  \"./**/src/**/*.{vue,ts,tsx}\" --fix",
         "lint:style": "stylelint \"./**/*.{css,less,vue,html}\" --fix",
         "lint:lint-staged": "lint-staged",
-        "prettier": "prettier --write ."
+        "prettier": "prettier --write .",
+        "preinstall": "npx only-allow pnpm"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": [
@@ -53,6 +53,7 @@
         "postcss-html": "^1.5.0",
         "postcss-scss": "^4.0.6",
         "prettier": "^2.8.3",
+        "rimraf": "^4.1.3",
         "sass": "^1.57.1",
         "stylelint": "^14.16.1",
         "stylelint-config-html": "^1.1.0",

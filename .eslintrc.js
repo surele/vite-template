@@ -35,6 +35,8 @@ module.exports = {
         "no-console": "off",
         "no-debugger": "off",
         "no-unused-vars": "warn",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-inferrable-types": "off",
         "@typescript-eslint/no-unused-vars": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/ban-types": [
